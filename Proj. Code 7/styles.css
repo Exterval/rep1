@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgba(132, 246, 79, 0.659) 25%, rgba(20, 95, 13, 0.626)), url(imagens/tres.jpg);
+    background-size:100% 290dvh;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header, footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    background: linear-gradient(hsla(29, 100%, 26%, 0.751), hsla(33, 45%, 42%, 0.751) ); 
+}
+
+
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 46px;
+}
+
+.navbar ul li a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: rgb(84, 55, 9);
+    border-radius: 10%;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+#tree1{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#tree1:hover{
+filter: blur(0.78px);
+}
+
+#trees2{
+    width:100vw;
+    height: 200px;
+    object-fit: cover;
+}
+
+#trees2:hover{
+filter: blur(0.78px);
+}
+
+section{
+    padding: 1%;
+}
+
+footer{
+    text-align: center;
+    font-size: 22px;
+    padding: 20px 0;
+    margin: auto;
+}
+
+@media (max-width: 603px) {
+    i{
+        font-size: 0.1rem;
+    }
+    
+    .navbar{
+        font-size: 0.6rem;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+
+    #tree1,h1,p{
+        padding: 0;
+    }
+
+    footer{
+        transform: translateY(0vh);
+    }
+}

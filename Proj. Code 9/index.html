@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Oversimplified Java</header>
+        <ul>
+            <a href="#Introduction_to_Java" class="nav-link">
+                <li>Introduction to Java</li>
+            </a><a href="#Programming" class="nav-link">
+                <li>Programming</li>
+            </a><a href="#Variables" class="nav-link">
+                <li>Variables</li>
+            </a><a href="#Arithmetic" class="nav-link">
+                <li>Arithmetic</li>
+            </a><a href="#Loops" class="nav-link">
+                <li>Loops</li>
+            </a>
+            </a><a href="#Arrays" class="nav-link">
+                <li>Arrays</li>
+            </a>
+        </ul>
+        
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction_to_Java">
+            <header>Introduction to Java</header>
+            <p>Java is an Object-oriented programming language developed by Oracle.</p>
+            <p>Advantages of Java include the capability to run on a variety of computers, its security and it is architecturally neutral.</p>
+            <p>Runs on a JVM(Java Virtual Machine) which allows the conversion of the previously-compiled bytecode to machine-code(binary) which improves performance significantly.</p>
+            <p><b>More features of Java:</b>
+                 <li>A binary program into which the Java</li>
+                compiler converts source code
+                <li>Java interpreter</li>
+                Checks bytecode and communicates
+                with the operating system
+                <li>Executes bytecode instructions line by
+                line within the Java Virtual Machine</li>
+                <li>WORA =
+                Write once, run anywhere</li>
+                <li>Windowed applications
+                Menus, Toolbars, Dialog boxes</li></p>
+
+        </section>
+        <section class="main-section" id="Programming">
+            <header>Programming</header>
+            <p>Programming in java always requires you to type the main function as it is the basis of your program/algorithm.</p>
+            <p>Main function is as follows:<br /><code>public static void main(String[] args){
+                
+            }
+            </code></p>
+            <p>public - An access modifier, which allows the JVM to access the main method from anywhere. </p>
+            <p>static - will share instances across the class(file) itself.</p>
+            <p>void - function not expecting a return value.</p>
+            <p>main - starting point of the program.</p>
+            <p>String[] args - allows us to type into the program and command line.</p>
+
+            <p>A hello world program in Java would look like this:</p>
+            <code>public class HelloWorld { <br>
+                public static void main(String[] args) {<br>
+                    System.out.println("Hello World!");<br>
+                }<br>
+            }</code>
+            <p>The output would be <code>Hello World!</code></p>
+            <p>Said output is located in a console in your chosen IDE(Integrated Development Environment)</p>
+        </section>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>The declaration of variables is done for storing data.</p>
+            <p>Common data types and declarations are as follows:
+               <br /> <code>
+                    //primitive
+                    <br />int inte = 100;
+                    <br />double doub = 1.0;
+                    <br />float flo = 1.0f; //needs f
+                    <br />boolean bool = false;
+                    <br />char chara = 'a';
+                    <br />short shor = 2;
+                    <br />byte bit = 1;<br />
+            
+                    <br />//non primitive
+                    <br />String string = "John";
+                </code>
+            </p>
+
+        
+        </section>
+        <section class="main-section" id="Arithmetic">
+            <header>Arithmetic</header>
+            <p>Math operations in java contain addition, subtraction, multiplication, division, and modulus.</p>
+            <p>Additional math operations need <code>java.math.*;</code> to be declared above their main function.</p>
+            <p>An example of a simple arithmetic operation in Java is the following:
+                <br /><code>public static void main(String[] args) {</code>
+                    <br /><code> int sum = 0, x = 1, y = 2;</code>
+            
+                    <br /><code>sum = x + y; //1+2</code>
+            
+                    <br /><code>System.out.println(sum);
+                    
+                        <br />}</code>
+            </p>
+            <p>Output of the program will be <code>3</code>.</p>
+        </section>
+        <section class="main-section" id="Loops">
+            <header>Loops</header>
+            <p>Loops are useful for repeating a statement in a program.</p>
+            <p>Commonly used loops are While, do-While, and for.</p>
+            <p>An example of a loop in Java would look like this:</p>
+            <code>public static void main(String[] args) {<br>
+                    
+                    // for loop = executes a block of code a limited amount of times.<br>
+            
+                    for(int i = 10; i>=0; i-=2){ //will decrement 10 until it is no longer greater than or equal to 0<br>
+                        System.out.println(i);<br>
+            
+                    }<br>
+            
+                    System.out.println("Happy new year!");<br>
+            
+            </code>
+            <p>The output would look like this:<code>
+                <br>10<br>
+                8<br>
+                6<br>
+                4<br>
+                2<br>
+                0<br>
+                Happy new year!</code></p>
+        </section>
+        <section class="main-section" id="Arrays">
+            <header>Arrays</header>
+            <p>Arrays are used for storing multiple values in a variable.</p>
+            <p>Declaration of arrays may look like this: <br>
+                <code>String[] cars = new String[3];</code>
+            </p>
+            <p>You now have a variable that can have multiple values.</p>
+            <p>Arrays are counted from 0 onwards. This is their index. Same case as characters in a string.</p>
+            <p>To assign values in an arrays is the following:<br>
+                <code>
+                    <br>cars[0] = "Camaro";
+                    <br>cars[1] = "Courgette";
+                    <br>cars[2] = "Tesla";
+                </code>
+            </p>
+            <p>If you wish to output a specific index of the array, simply declare the array with the given index.</p>
+            <p>It would look something like this:<br>
+                <code>System.out.println(cars[0]);</code>
+            </p>
+            <p>It would produce an output of<br> <code>Camaro</code></p>
+        </section>
+    </main>
+</body>
+</html>

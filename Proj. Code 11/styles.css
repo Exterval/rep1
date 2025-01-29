@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #000;
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    background-color: #975b5b;
+    justify-content: space-between;
+    top: 1;
+    flex-direction: row-reverse;
+    position: fixed;
+    width: 100vw;
+}
+
+#navbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0px;
+}
+
+#navbar ul a{
+    text-decoration: none;
+    color: rgb(78, 29, 29);
+    font-weight: bold; 
+    margin-right: 40px;
+}
+
+#navbar ul a:hover{
+    color: rgb(126, 46, 46);
+    transition: 0.4s;
+}
+
+#navbar ul li{
+    display: inline-block; 
+    text-transform: uppercase;
+    padding: 0.5rem;
+}
+
+#welcome-section{
+    height: 25rem;
+    box-shadow: rgb(255, 196, 196) 0px 10px 100px;
+    background: linear-gradient(40deg, rgb(78, 29, 29), rgb(217, 185, 185));
+}
+
+#welcome-section h1{
+    text-align: center;
+    padding-top: 170px;
+}
+
+#welcome-section p{
+    text-align: center;
+    bottom: 0;
+    padding-top: 25px;
+}
+
+#project-part{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#projects{
+        margin-top: 10px;
+        height: 600px;
+        background: linear-gradient(-40deg, rgb(78, 29, 29), rgb(217, 185, 185));
+}
+
+#projects .project-tile{
+        display: flex;
+        gap: 10px;
+        height: 400px;
+        margin: auto;
+        width: 600px;
+        align-items: center;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        transition: 0.3s;
+        box-shadow: black 0px 10px 10px;
+        border-radius: 40px;
+}
+
+#projects .project-tile #card{
+        scroll-snap-align: center;
+        padding: 10px 30px;
+        flex-shrink: 0;
+        height: 400px;
+        width: 600px;
+        background-color: rgb(213, 139, 139);
+        border-radius: 40px;
+        text-align: center;
+        
+}
+
+#projects .project-tile #card a{
+    text-decoration: none;
+}
+
+#projects .project-tile #card h2{
+    color: black;
+}
+
+#projects .project-tile #card p{
+    color: black;
+    padding-top: 20px;
+    font-size: 10px;
+    margin: 40px;
+}
+
+#projects h3{
+    padding-top: 15px;
+    text-align: center;
+    font-size: 10px;
+    opacity: 50%;
+}
+
+footer{
+    background-color: #975b5b;
+    height: 100px;
+}
+
+footer h3{
+    text-align: center;
+    padding-top: 45px;
+}
+
+@media (max-width:500px) {
+    #navbar ul a{
+        margin-right: 10px;
+        font-size: small;
+    }
+
+    #projects .project-tile{
+        width: 300px;
+    }
+
+    #projects .project-tile #card{
+        width: 300px;
+    }
+}

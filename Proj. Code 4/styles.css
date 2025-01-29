@@ -1,0 +1,9 @@
+img{
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 24/9;
+}
+
+img:hover{
+    aspect-ratio: 1/1;
+}
