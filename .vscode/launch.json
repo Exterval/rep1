@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "name": "http://127.0.0.1:3000/Proj Code 12/index.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/Proj Code 12/index.html"
+        },
+        {
+            "type": "msedge",
+            "name": "http://127.0.0.1:3000/Proj%20Code%2012/index.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/Proj%20Code%2012/index.html"
+        },
+        {
+            "type": "msedge",
+            "name": "http://127.0.0.1:3000/Proj Code 13/index.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/Proj Code 13/index.html"
+        },
+        {
+            "type": "msedge",
+            "name": "http://127.0.0.1:3000/Proj%20Code%2013/index.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/Proj%20Code%2013/index.html"
+        }
+    ]
+}
