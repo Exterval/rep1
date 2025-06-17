@@ -1,0 +1,94 @@
+:root{
+    --bg: #c1c0c0;
+    --calscr: #7fb46a;
+    --scrtext: #062288;
+}   
+
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #817F7F;
+}
+
+.container{
+    width: 310px;
+    margin: auto;
+    text-align: center;
+    border-radius: 30%;
+    padding-top: 5px;
+}
+
+.container2{
+    width: 300px;
+    height: 350px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #434242;
+}
+
+.container2 .screen{
+    width: 250px;
+    height: 40px;
+    margin: auto;
+    background-color: var(--calscr);
+    translate: 0 20px;
+}
+
+.container2 .screen #text{
+    text-align: center;
+    translate: 0 10px;
+    color: var(--scrtext);
+}
+
+.buttons{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+   
+    width:200px;
+    height: 200px;
+    translate: -35px 50px;
+}
+
+.buttons .btn{
+    margin: 10px;
+    height: 41.5px;
+    width: 40px;
+    padding: 10px;
+}
+
+.equals{
+    width: 200px;
+    height: 200px;
+    translate: 217px -17px; 
+}
+
+.equals #plus{
+    width: 30%;
+    height: 30px;
+    translate: -64px -75px;
+}
+
+.equals #minus{
+    width: 30%;
+    height: 30px;
+    translate: -128px -115px;
+}
+
+.equals #divide{
+    width: 30%;
+    height: 30px;
+    translate: -0px -225px;
+}
+
+.equals #equal{
+    width: 30%;
+    height: 103px;
+}
+
+
+

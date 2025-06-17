@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--MAKE A CALCULATOR SITE-->
+    <div class="container">
+        <h1 id="titulos">CALCULATOR</h1>
+    </div>
+
+    <div class="container2">
+        <div class="screen">
+            <p id = "text"></p>
+        </div>
+        <div class="buttons">
+            <input type="button" value="7" id="7" class="btn" onclick="siete(),  numberPlace('7')">
+            <input type="button" value="8" id="8" class="btn" onclick="ocho(), numberPlace('8')">
+            <input type="button" value="9" id="9" class="btn" onclick="nueve(), numberPlace('9')">
+            <input type="button" value="6" id="6" class="btn" onclick="sais(), numberPlace('6')">
+            <input type="button" value="5" id="5" class="btn" onclick="cinco(), numberPlace('5')">
+            <input type="button" value="4" id="4" class="btn"onclick="quatro(), numberPlace('4')">
+            <input type="button" value="3" id="3" class="btn" onclick="tres(), numberPlace('3')">
+            <input type="button" value="2" id="2" class="btn" onclick="dos(), numberPlace('2')">
+            <input type="button" value="1" id="1" class="btn" onclick="uno(), numberPlace('1')">
+            <input type="button" value="0" id="0" class="btn" onclick="none(), numberPlace('0')">
+            <input type="button" value="." id="." class="btn">
+            <input type="button" value="AC" id="clear" class="btn" onclick="document.location.reload(true)">
+        </div>
+        <div class="equals">
+            <input type="button" value="=" id = "equal" onclick="equ()">
+            <input type="button" value="+" id="plus" onclick="operationPlace('+')">
+            <input type="button" value="-" id="minus" onclick="operationPlace('-')">
+            <input type="button" value="/" id="divide" onclick="operationPlace('/')">
+        </div>
+    </div>
+</body>
+</html>
