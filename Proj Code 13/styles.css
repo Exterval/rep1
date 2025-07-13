@@ -1,0 +1,66 @@
+:root{
+    --bgcol: #e1dbd6;
+    --maincol: #d1d1d1;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: var(--bgcol);
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-left: transparent;
+    border-right: transparent;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+input[type="text"]{
+    transition: width 0.4s ease-in-out;
+    width: 30px;
+    height: 30px;
+    border: 1px;
+    border-style: none;
+}
+
+input[type="text"]:focus{
+    width: 20%;
+}
+
+.container{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.container button{
+    border: none;
+    width: 70px;
+    height: 30px;
+    background-color: darkgray;
+    padding: 5px;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.container button:hover{
+    background-color: rgb(225, 224, 224);
+}
+
+p{
+    margin-top: 50px;
+    text-align: center;
+}
