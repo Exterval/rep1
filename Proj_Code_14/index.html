@@ -13,13 +13,14 @@
     <div id="line"><button id="add" onclick = "addNote()">Add a Note</button>
 </div>
     <div class="modal" id="modal">
-        <div id="modalContent"><textarea name="textArea" id="textNotes" placeholder="enter your thoughts here..."></textarea>
-            <button id="confirmBtn">Confirm</button>
+        <div id="modalContent">
+            <textarea name="textArea" id="textNotesTitle" placeholder="enter your title here..." required></textarea>
+            <textarea name="textArea" id="textNotes" placeholder="enter your thoughts here..." required></textarea>
+            <button id="confirmBtn" onclick="submitNote()">Confirm</button>
         </div>
     </div>
     
 
     <script src="script.js"></script>
-
 </body>
 </html>
