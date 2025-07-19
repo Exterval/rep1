@@ -39,6 +39,19 @@ function checkForNotes(){
         description: ${desc} `);
     });
   }
+  updateNotes();
+}
+
+//function for updating
+function updateNotes(){
+  document.getElementById('container').innerHTML  = "";
+  notes.forEach(({name, desc})=>{
+    document.getElementById('container').innerHTML  += `;
+    <div id="container">
+      
+    </div>
+    `
+  });
 }
 
 window.onclick = function(event) {
