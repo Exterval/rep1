@@ -39,17 +39,16 @@ function checkForNotes(){
         description: ${desc} `);
     });
   }
-  updateNotes();
+   updateNotes();
 }
 
 //function for updating
 function updateNotes(){
   document.getElementById('container').innerHTML  = "";
   notes.forEach(({name, desc})=>{
-    document.getElementById('container').innerHTML  += `;
-    <div id="container">
-      
-    </div>
+    document.getElementById('container').innerHTML  += `
+      <h2>${name}</h2>
+      <p>${desc}</p>
     `
   });
 }

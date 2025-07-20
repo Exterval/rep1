@@ -39,7 +39,7 @@ hr{
 }
 
 
-.container{
+#container{
     position: absolute;
     top: 0;
     width: 100vw;
