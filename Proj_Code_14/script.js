@@ -49,8 +49,19 @@ function updateNotes(){
     document.getElementById('container').innerHTML  += `
       <h2>${name}</h2>
       <p>${desc}</p>
+
     `
   });
+}
+
+//function for editing notes, remember to include the Id of the user's desired choice.
+function editNote(){
+
+}
+
+//function for deleting notes, remember to include the Id of the user's desired choice.
+function deleteNote(){
+
 }
 
 window.onclick = function(event) {
