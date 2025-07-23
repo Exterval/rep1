@@ -2,7 +2,7 @@
 
 //array for added notes
 let notes = [];
-let noteIndex = 0;
+let currentNote = {};
 
 //submit on modal
 function submitNote(){
@@ -11,19 +11,25 @@ function submitNote(){
     return;
   }
 
-  
+  const index = notes.findIndex((note)=>note.id === currentNote.id);
 
+  if(index === -1){
     notes.push({
     id:`${document.getElementById('textNotesTitle').value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
     name: document.getElementById('textNotesTitle').value,
     desc: document.getElementById('textNotes').value
   });
-
+  }else{
+    notes[index] =  {
+    id:`${document.getElementById('textNotesTitle').value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
+    name: document.getElementById('textNotesTitle').value,
+    desc: document.getElementById('textNotes').value
+  }
+  }
   modal.style.display = "none";
   checkForNotes();
   document.getElementById('textNotesTitle').value = '';
   document.getElementById('textNotes').value = '';
-
 }
 
 function addNote(){
@@ -33,7 +39,7 @@ function addNote(){
 
 function checkForNotes(){
   if(notes.length === 0){
-    console.err("No notes were found.");
+    console.error("No notes were found.");
     return;
   } else{
     notes.forEach(({id, name, desc}, index) =>{ 
@@ -43,6 +49,7 @@ function checkForNotes(){
         description: ${desc} `);
     });
   }
+  currentNote = {};
    updateNotes();
 }
 
@@ -60,9 +67,9 @@ function updateNotes(){
 
 //function for editing notes, remember to include the Id of the user's desired choice.
 function editNote(ID){
-      const noteFound = notes.find(notes => notes.id === ID);
-      document.getElementById('textNotesTitle').value = noteFound.name;
-      document.getElementById('textNotes').value = noteFound.desc;
+      currentNote = notes.find(notes => notes.id === ID);
+      document.getElementById('textNotesTitle').value = currentNote.name;
+      document.getElementById('textNotes').value = currentNote.desc;
       document.getElementById('confirmBtn').innerText = "Edit";
       document.getElementById("modal").style.display = "block";
 }
