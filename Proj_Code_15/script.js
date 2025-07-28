@@ -1,4 +1,5 @@
 //algo for Roman Numeral Converter
+const userInput = document.getElementById('number');
 let num = 0;
 //reference for roman numerals
 const table =[["M", 1000], ["CM", 900], ["D", 500], ["CD", 400],
@@ -8,25 +9,28 @@ const table =[["M", 1000], ["CM", 900], ["D", 500], ["CD", 400],
 let roman = [];
 let string;
 
-let userInput = Number(prompt("Enter a number"));
-if(isNaN(userInput) || userInput === undefined || userInput === null || userInput === ''){
+const assess = (val) =>{
+    reset();
+    val = userInput.value;
+if(isNaN(val) || val === undefined || val === null || val === ''){
    alert("What are you doing");
 }else{
-    //debug this
-    while(userInput !== 0){
     table.forEach(x=>{
-        if(x[1] <= userInput){
+        while(x[1] <= val){
             console.log(x[1]);
-            num += x[1];
-            userInput -= x[1];
             roman.push(x[0]);
-            string = roman.join("");
+            num += x[1];
+            val -= x[1];
         }
+        return string = roman.join("");
     });
+    document.getElementById('output').textContent = string;
     }
-    
+    console.log(num, val, roman, string);
 }
-console.log(num, userInput, roman, string);
 
+const reset = () =>{
+    roman.splice(0, roman.length);
+    document.getElementById('output').textContent = "";
+}
 
-//
