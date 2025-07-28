@@ -1,0 +1,41 @@
+:root{
+    --bg-color: #000000;
+    --text-color: #FFFFFF;
+}
+
+*{
+margin: 0;
+box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1{
+    text-align: center;
+}
+
+.container{
+    align-content: center;
+    text-align: center;
+}
+
+#output{
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*NON STANDARD CODE*/
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
