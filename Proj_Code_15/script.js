@@ -11,10 +11,18 @@ let string;
 
 const assess = (val) =>{
     reset();
-    val = userInput.value;
-if(isNaN(val) || val === undefined || val === null || val === ''){
+    val = userInput.value.replace("/[^a-zA-Z _.-]/g", "");
+    console.log(val);
+if(isNaN(val) || val === undefined || val === null || val === '' ){
    alert("What are you doing");
-}else{
+   document.getElementById('output').textContent = "Please enter a valid number";
+}else if(val > 3999){
+    alert("Please enter a number less than or equal to 3999");
+    document.getElementById('output').textContent = "Please enter a number less than or equal to 3999";
+} else if(val <= 0){
+    alert("Please enter a number greater than or equal to 1");
+    document.getElementById('output').textContent = "Please enter a number greater than or equal to 1";
+} else{
     table.forEach(x=>{
         while(x[1] <= val){
             console.log(x[1]);
