@@ -14,17 +14,40 @@ body{
 }
 
 h1{
+    margin: 10px;
     text-align: center;
 }
 
 .container{
     align-content: center;
     text-align: center;
+    transition: ease-in-out 2s;
 }
+
+.container button{
+    display: block;
+    border: none;
+    background-color: hsl(34, 78%, 91%);
+    width: 5rem;
+    height: 2rem;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 1rem;
+}
+
+.container button:hover{
+    background-color: hsl(34, 78%, 99%);
+}
+
 
 #output{
     margin-top: 10px;
     text-align: center;
+}
+
+input[type="number"]{
+    width: 25dvw;
+    height: 3.5dvh;
 }
 
 /*NON STANDARD CODE*/
