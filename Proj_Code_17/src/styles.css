@@ -1,5 +1,7 @@
 :root{
     --bg-color: #464D77;
+    --main-color: #929aca;
+    --title-color: #a8b8ff;
 }
 
 *{
@@ -14,14 +16,26 @@ body{
 }
 
 .container{
+    width: 100vw;
     display: flex;
+    z-index: 2;
     background-color: hsl(231, 28%, 50%);
     justify-content: flex-end;
     align-items: center;
     border-bottom: 1px hsl(231, 40%, 49%);;
-    box-shadow: 5px 5px 50px 5px hsl(231, 40%, 49%);
+    box-shadow: 5px -5px 40px 15px hsl(231, 40%, 49%);
     height: 38px;
 }
+
+.container i{
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+.container i:hover{
+    color: rgb(2, 2, 2);
+}
+
 
 ul{
     list-style: none;
@@ -29,17 +43,76 @@ ul{
 
 li{
     display: inline;
-    padding: 25px;
+    padding: 40px;
 }
 
 a{
     cursor: pointer;
+}
+
+a, h1, h2, p{
     text-decoration: none;
     color: aliceblue;
 }
 
 a:hover{
     color: rgb(181, 217, 249);
+}
+
+img{
+    width: 20px;
+}
+
+h1{
+    position: relative;
+    z-index: -1;
+    text-align: center;
+    background-color: var(--bg-color);
+    margin-top: 15px;
+}
+
+#page{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    background-color: var(--main-color);
+    width: 100vw;
+    height: 80dvh;
+    z-index: -1;
+    justify-content: center;
+}
+
+#page #stuff{
+    background-color: var(--title-color);
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow:  0 5px 5px 0 #00000045;
+    transition: ease-in-out 0.2s
+}
+
+#page #stuff h2{
+    text-align: center;
+    padding-top: 10px;
+}
+
+#page #stuff:hover{
+    width: 50%;
+    background-color: hsl(226, 100%, 83%);
+}
+
+footer{
+    position: absolute;
+    width: 100dvw;
+    height: 10vh;
+    background-color: hsl(231, 28%, 50%);
+    bottom: 0;
+    text-align: center;
+}
+
+footer p{
+    padding-top: 25px;
 }
 
 @media (max-width: 415px) {
@@ -52,5 +125,8 @@ a:hover{
         padding: 9px;
         font-size: small;
     }
-
+    #page{
+        height: 70vh;
+    }
 }
+
