@@ -1,0 +1,18 @@
+{
+  "name": "proj_code_18",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.6",
+    "@fontsource/inter": "^5.2.6",
+    "@fontsource/open-sans": "^5.2.6"
+  }
+}

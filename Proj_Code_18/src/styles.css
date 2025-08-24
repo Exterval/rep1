@@ -1,0 +1,80 @@
+:root{
+    --bg-color: #4b91e2;
+    --title-color: #ffffff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+}
+
+#phone{
+    transform: translateY(1px);
+    margin: auto;
+    width: 325px;
+    height: 35px;
+    background-color: #5f5656;
+    border-radius: 100px;
+}
+
+#telephone{
+    --p: 90px;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    background-color: #6e6464;
+    width: 400px;
+    height: 179px;
+    /*TAKEN FROM CSS-SHAPE.COM*/
+    clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+    /*TAKEN FROM CSS-SHAPE.COM*/
+
+}
+
+.telephone2{
+    transform: translateY(-1px);
+    width: 400px;
+    height: 30px;
+    margin: auto;
+    background-color: #6e6464;
+}
+
+.container{
+    margin: auto;
+    align-items: center;
+    padding-top: 15px;
+    width: 50%;
+    height: 80%;
+    background-color: rgb(209, 213, 217);
+    border-radius: 20px;
+}
+
+
+h1{
+    color: var(--title-color);
+    text-shadow: 1px 1px #6e6464;
+    text-align: center;
+    padding-top: 15dvh;
+}
+
+input[type="text"]{
+    margin-top: 5px;
+    height: 30%;
+}
+
+button{
+    margin-top: 25px;
+    width: 5rem;
+    padding: 5px;
+}
+
+#results-div{
+    text-align: center;
+    padding-top: 25px;
+}
