@@ -39,4 +39,9 @@ body{
     background-color: var(--box-color);
     border: 1px solid black;
     margin: auto;
+    
+}
+
+.disabled{
+    filter: blur(1px);
 }
