@@ -13,16 +13,27 @@ for(let i = 0; i<9; i++){
 }
 
 Array.from(box.children).forEach((el)=>{
-    el.addEventListener('click', clickedBox); //DEBUG
+    el.addEventListener('click', clickedBox);
 });
 
 function disable(bool){
     console.log('disable called');
-    if(bool === true){
+    if(bool){
         currentSelections[0].removeEventListener('click', clickedBox);
         currentSelections[1].removeEventListener('click', clickedBox);
-    }
-    return currentSelections.splice(0,2);
+    }else{
+        currentSelections[0].style.backgroundColor = "darkred";
+        currentSelections[1].style.backgroundColor = "darkred";
+       setTimeout(() => {
+        currentSelections[0].style.backgroundColor = "hsl(26, 88%, 70%)";
+        currentSelections[1].style.backgroundColor = "hsl(26, 88%, 70%)";
+    }, 1000);
+        currentSelections[0].classList.remove("disabled");
+        currentSelections[1].classList.remove("disabled");        
+    }     
+    return setTimeout(() => {
+            currentSelections.splice(0,2);
+        }, 1000);
 }
 
 function pair(arr){
@@ -43,10 +54,13 @@ function check(arr){
     }
 }
 
-function clickedBox(el){
-    el.classList.add('disabled');
-    el.disabled = true;
-    currentSelections.push(el);
+function clickedBox(evt){ //USE EVT FOR EXPLICIT FUNCTIONS INSIDE ADDEVENTLISTENERS
+    evt.target.classList.add('disabled');
+    evt.target.disable = true;
+    if(currentSelections.length !== 0 && evt.target.id === currentSelections[0].id){
+        return alert('Choose a different element.');
+    } 
+    currentSelections.push(evt.target);
     const pairID = setTimeout(pair(currentSelections), 500);
-    }
+}
 
