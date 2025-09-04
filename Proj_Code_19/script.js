@@ -2,6 +2,7 @@
 
 let values = ['💀', '👿', '😭'];
 let currentSelections = [];
+let isAPair;
 const box = document.querySelector('.box');
 
 for(let i = 0; i<9; i++){
@@ -12,31 +13,40 @@ for(let i = 0; i<9; i++){
 }
 
 Array.from(box.children).forEach((el)=>{
-    el.addEventListener('click', event =>{
-        event.target.classList.add('disabled');
-        event.target.disabled = true;
-        currentSelections.push(event.target.innerText);
-        const pairID = setTimeout(pair(currentSelections), 500);
-    });
+    el.addEventListener('click', clickedBox); //DEBUG
 });
 
-function reset(){
-    console.log('reset called');
-
+function disable(bool){
+    console.log('disable called');
+    if(bool === true){
+        currentSelections[0].removeEventListener('click', clickedBox);
+        currentSelections[1].removeEventListener('click', clickedBox);
+    }
+    return currentSelections.splice(0,2);
 }
 
 function pair(arr){
     if (arr.length < 2) return console.error('More items are needed to assess!');
-    else check(arr);
-    reset();
+    else isAPair = check(arr);
+    disable(isAPair);
 }
 
-//check for elems if a pair is matched vertically
+//check for elems if a pair is matched
 function check(arr){
     console.log(arr);
-    if(arr[0] === arr[1]) console.log('ts true');
-    else console.log('nah twin');
-    return arr.splice(0,2);
+    if(arr[0].innerText === arr[1].innerText){
+        console.log('ts true'); 
+        return true;
+    } 
+    else{
+        return false;
+    }
 }
 
+function clickedBox(el){
+    el.classList.add('disabled');
+    el.disabled = true;
+    currentSelections.push(el);
+    const pairID = setTimeout(pair(currentSelections), 500);
+    }
 
