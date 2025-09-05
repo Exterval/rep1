@@ -27,7 +27,7 @@ function disable(bool){
        setTimeout(() => {
         currentSelections[0].style.backgroundColor = "hsl(26, 88%, 70%)";
         currentSelections[1].style.backgroundColor = "hsl(26, 88%, 70%)";
-    }, 1000);
+    }, 500);
         currentSelections[0].classList.remove("disabled");
         currentSelections[1].classList.remove("disabled");        
     }     
