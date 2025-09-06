@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>First Bootstrap App</title>
+</head>
+<body>
+    <div class="container">
+    <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#testCollapse" aria-expanded="true" aria-controls="testCollapse">
+                    Test!
+                </button>
+                </h2>
+                <div id="testCollapse" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Hello world</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
